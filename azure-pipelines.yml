@@ -4,8 +4,9 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- azure-pipelines
 
+# Need to figure out what pool is
 pool:
   vmImage: 'ubuntu-latest'
 
@@ -14,6 +15,8 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
+    cd docker/fedora/30/
+    docker build "fd30:fedora30docker"
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
