@@ -1,4 +1,4 @@
-FROM fedora:30
+FROM fedora:31
 
 # install EMANE build dependencies
 # RUN dnf install gcc-c++ autoconf automake libtool libxml2-devel protobuf-devel python2-protobuf python3-protobuf libpcap-devel pcre-devel libuuid-devel rpm-build python2-setuptools python3-setuptoo
@@ -16,4 +16,4 @@ FROM fedora:30
 # WORKDIR emane/.rpmbuild
 # RUN dnf install $(ls RPMS/x86_64/*.rpm RPMS/noarch/*.rpm | grep -v debuginfo) -y
 
-RUN echo 'fake fedora30 ran'
+RUN echo 'fake fedora31 ran'
