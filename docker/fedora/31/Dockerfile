@@ -7,7 +7,7 @@ RUN dnf install gcc-c++ autoconf automake libtool libxml2-devel protobuf-devel p
 RUN git clone https://github.com/adjacentlink/emane.git
 
 # build RPMs
-RUN cd emane && ./autogen.sh && ./configure && make rpm
+# RUN cd emane && ./autogen.sh && ./configure && make rpm
 
 # install RPMs
-RUN cd emane/.rpmbuild && dnf install $(ls RPMS/x86_64/*.rpm RPMS/noarch/*.rpm | grep -v debuginfo) -y
+# RUN cd emane/.rpmbuild && dnf install $(ls RPMS/x86_64/*.rpm RPMS/noarch/*.rpm | grep -v debuginfo) -y
