@@ -1,9 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/fakefedora30', '.' ]
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/fakefedora30', 'docker/fedora/30' ]
   timeout: 300s
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/fakefedora31', '.' ]
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/fakefedora31', 'docker/fedora/31' ]
   timeout: 300s
 images:
 - 'gcr.io/$PROJECT_ID/fakefedora30'
