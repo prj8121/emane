@@ -13,3 +13,7 @@ images:
 - 'gcr.io/$PROJECT_ID/fakefedora30'
 - 'gcr.io/$PROJECT_ID/fakefedora31'
 
+artifacts:
+  objects:
+    location: 'gs://testArtifacts'
+    paths: [ '*.rpms' ]
